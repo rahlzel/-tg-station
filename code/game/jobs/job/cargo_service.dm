@@ -7,7 +7,7 @@ Quartermaster
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 1
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "the head of personnel"
 	selection_color = "#d7b088"
@@ -33,7 +33,7 @@ Cargo Technician
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 3
+	total_positions = -1
 	spawn_positions = 2
 	supervisors = "the quartermaster and the head of personnel"
 	selection_color = "#dcba97"
@@ -57,7 +57,7 @@ Shaft Miner
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 3
+	total_positions = -1
 	spawn_positions = 3
 	supervisors = "the quartermaster and the head of personnel"
 	selection_color = "#dcba97"
@@ -95,7 +95,7 @@ Bartender
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 1
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "the head of personnel"
 	selection_color = "#bbe291"
@@ -146,7 +146,7 @@ Cook
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 2
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "the head of personnel"
 	selection_color = "#bbe291"
@@ -180,7 +180,7 @@ Botanist
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 3
+	total_positions = -1
 	spawn_positions = 2
 	supervisors = "the head of personnel"
 	selection_color = "#bbe291"
@@ -207,7 +207,7 @@ Janitor
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 2
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "the head of personnel"
 	selection_color = "#bbe291"

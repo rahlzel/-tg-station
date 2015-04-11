@@ -7,7 +7,7 @@ Research Director
 	department_head = list("Captain")
 	department_flag = MEDSCI
 	faction = "Station"
-	total_positions = 1
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "the captain"
 	selection_color = "#ffddff"
@@ -49,7 +49,7 @@ Scientist
 	department_head = list("Research Director")
 	department_flag = MEDSCI
 	faction = "Station"
-	total_positions = 5
+	total_positions = -1
 	spawn_positions = 3
 	supervisors = "the research director"
 	selection_color = "#ffeeff"
@@ -74,7 +74,7 @@ Roboticist
 	department_head = list("Research Director")
 	department_flag = MEDSCI
 	faction = "Station"
-	total_positions = 2
+	total_positions = -1
 	spawn_positions = 2
 	supervisors = "research director"
 	selection_color = "#ffeeff"

@@ -7,7 +7,7 @@ Chief Engineer
 	department_head = list("Captain")
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 1
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "the captain"
 	selection_color = "#ffeeaa"
@@ -51,7 +51,7 @@ Station Engineer
 	department_head = list("Chief Engineer")
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 5
+	total_positions = -1
 	spawn_positions = 5
 	supervisors = "the chief engineer"
 	selection_color = "#fff5cc"
@@ -84,7 +84,7 @@ Atmospheric Technician
 	department_head = list("Chief Engineer")
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 3
+	total_positions = -1
 	spawn_positions = 2
 	supervisors = "the chief engineer"
 	selection_color = "#fff5cc"

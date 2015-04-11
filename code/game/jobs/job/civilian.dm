@@ -7,7 +7,7 @@ Clown
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 1
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "the head of personnel"
 	selection_color = "#dddddd"
@@ -49,7 +49,7 @@ Mime
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 1
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "the head of personnel"
 	selection_color = "#dddddd"
@@ -93,7 +93,7 @@ Librarian
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 1
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "the head of personnel"
 	selection_color = "#dddddd"
@@ -119,7 +119,7 @@ Lawyer
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 2
+	total_positions = -1
 	spawn_positions = 2
 	supervisors = "the head of personnel"
 	selection_color = "#dddddd"

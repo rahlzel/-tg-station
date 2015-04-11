@@ -11,7 +11,7 @@ var/datum/subsystem/shuttle/SSshuttle
 
 		//emergency shuttle stuff
 	var/obj/docking_port/mobile/emergency/emergency
-	var/emergencyCallTime = 6000	//time taken for emergency shuttle to reach the station when called (in deciseconds)
+	var/emergencyCallTime = 3000	//time taken for emergency shuttle to reach the station when called (in deciseconds)
 	var/emergencyDockTime = 1800	//time taken for emergency shuttle to leave again once it has docked (in deciseconds)
 	var/emergencyEscapeTime = 1200	//time taken for emergency shuttle to reach a safe distance after leaving station (in deciseconds)
 	var/area/emergencyLastCallLoc

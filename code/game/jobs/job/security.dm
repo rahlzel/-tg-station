@@ -13,7 +13,7 @@ Head of Security
 	department_head = list("Captain")
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 1
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "the captain"
 	selection_color = "#ffdddd"
@@ -64,7 +64,7 @@ Warden
 	department_head = list("Head of Security")
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 1
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "the head of security"
 	selection_color = "#ffeeee"
@@ -114,7 +114,7 @@ Detective
 	department_head = list("Head of Security")
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 1
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "the head of security"
 	selection_color = "#ffeeee"
@@ -161,7 +161,7 @@ Security Officer
 	department_head = list("Head of Security")
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 5 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
+	total_positions = -1 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
 	spawn_positions = 5 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
 	supervisors = "the head of security, and the head of your assigned department (if applicable)"
 	selection_color = "#ffeeee"

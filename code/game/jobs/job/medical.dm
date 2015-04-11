@@ -7,7 +7,7 @@ Chief Medical Officer
 	department_head = list("Captain")
 	department_flag = MEDSCI
 	faction = "Station"
-	total_positions = 1
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "the captain"
 	selection_color = "#ffddf0"
@@ -47,7 +47,7 @@ Medical Doctor
 	department_head = list("Chief Medical Officer")
 	department_flag = MEDSCI
 	faction = "Station"
-	total_positions = 5
+	total_positions = -1
 	spawn_positions = 3
 	supervisors = "the chief medical officer"
 	selection_color = "#ffeef0"
@@ -76,7 +76,7 @@ Chemist
 	department_head = list("Chief Medical Officer")
 	department_flag = MEDSCI
 	faction = "Station"
-	total_positions = 2
+	total_positions = -1
 	spawn_positions = 2
 	supervisors = "the chief medical officer"
 	selection_color = "#ffeef0"
@@ -101,7 +101,7 @@ Geneticist
 	department_head = list("Chief Medical Officer", "Research Director")
 	department_flag = MEDSCI
 	faction = "Station"
-	total_positions = 2
+	total_positions = -1
 	spawn_positions = 2
 	supervisors = "the chief medical officer and research director"
 	selection_color = "#ffeef0"
@@ -127,7 +127,7 @@ Virologist
 	department_head = list("Chief Medical Officer")
 	department_flag = MEDSCI
 	faction = "Station"
-	total_positions = 1
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "the chief medical officer"
 	selection_color = "#ffeef0"

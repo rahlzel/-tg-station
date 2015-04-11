@@ -21,7 +21,7 @@ REVIVAL_BRAIN_LIFE -1
 ### RENAMING ###
 
 #Uncomment to allow cyborgs to rename themselves at roundstart.  Has no effect on roboticists renaming cyborgs the normal way.
-#RENAME_CYBORG
+RENAME_CYBORG
 
 ### OOC DURING ROUND ###
 #Comment this out if you want OOC to be automatically disabled during the round, it will be enabled during the lobby and after the round end results.
@@ -152,7 +152,7 @@ ALLOW_LATEJOIN_ANTAGONISTS
 ### RANDOM EVENTS ###
 
 ## Comment this to disable random events during the round.
-ALLOW_RANDOM_EVENTS
+#ALLOW_RANDOM_EVENTS
 
 
 ### AI ###
@@ -166,7 +166,7 @@ ALLOW_AI
 
 ## How long the delay is before the Away Mission gate opens. Default is half an hour.
 ## 600 is one minute.
-GATEWAY_DELAY 18000
+GATEWAY_DELAY 3000
 
 
 ### ACCESS ###
@@ -183,13 +183,13 @@ MINIMAL_ACCESS_THRESHOLD 20
 #JOBS_HAVE_MINIMAL_ACCESS
 
 ## Uncomment to give assistants maint access.
-#ASSISTANTS_HAVE_MAINT_ACCESS
+ASSISTANTS_HAVE_MAINT_ACCESS
 
 ## Uncoment to give security maint access. Note that if you comment JOBS_HAVE_MINIMAL_ACCESS security already gets maint from that.
-#SECURITY_HAS_MAINT_ACCESS
+SECURITY_HAS_MAINT_ACCESS
 
 ## Uncomment to give everyone maint access.
-#EVERYONE_HAS_MAINT_ACCESS
+EVERYONE_HAS_MAINT_ACCESS
 
 ## Comment this to make security officers spawn in departmental security posts
 SEC_START_BRIG
@@ -224,7 +224,7 @@ DEFAULT_LAWS 1
 SILICON_MAX_LAW_AMOUNT 12
 
 ## Uncoment to give players the choice of their species before they join the game
-#JOIN_WITH_MUTANT_RACE
+JOIN_WITH_MUTANT_RACE
 
 ## Assistant slot cap. Set to -1 for unlimited.
 ASSISTANT_CAP -1
@@ -233,7 +233,7 @@ ASSISTANT_CAP -1
 STARLIGHT
 
 ## Uncomment to bring back old grey suit assistants instead of the now default rainbow colored assistants.
-#GREY_ASSISTANTS
+GREY_ASSISTANTS
 
 ### Midround Antag (aka Mulligan antag) config options ###
 

@@ -7,7 +7,7 @@ Captain
 	department_head = list("Centcom")
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 1
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "Nanotrasen officials and Space law"
 	selection_color = "#ccccff"
@@ -59,7 +59,7 @@ Head of Personnel
 	department_head = list("Captain")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 1
+	total_positions = -1
 	spawn_positions = 1
 	supervisors = "the captain"
 	selection_color = "#ddddff"
