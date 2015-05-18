@@ -224,7 +224,7 @@
 	anchored = 1
 
 /atom/movable/light/Destroy()
-	return 1
+	return QDEL_HINT_LETMELIVE
 
 /atom/movable/light/Move()
 	return 0
@@ -238,6 +238,9 @@
 /turf/ChangeTurf(var/path)
 	if(!path || path == type) //Sucks this is here but it would cause problems otherwise.
 		return ..()
+
+	for(var/obj/effect/decal/cleanable/decal in src.contents)
+		qdel(decal)
 
 	if(light)
 		qdel(light)

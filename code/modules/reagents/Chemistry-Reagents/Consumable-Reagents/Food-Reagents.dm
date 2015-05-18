@@ -13,6 +13,7 @@ datum/reagent/consumable
 	var/nutriment_factor = 1 * REAGENTS_METABOLISM
 
 datum/reagent/consumable/on_mob_life(var/mob/living/M as mob)
+	current_cycle++
 	M.nutrition += nutriment_factor
 	holder.remove_reagent(src.id, metabolization_rate)
 
@@ -58,7 +59,6 @@ datum/reagent/consumable/sugar
 datum/reagent/consumable/sugar/overdose_start(var/mob/living/M as mob)
 	M << "<span class = 'userdanger'>You go into hyperglycaemic shock! Lay off the twinkies!</span>"
 	M.sleeping += 30
-	..()
 	return
 
 datum/reagent/consumable/sugar/overdose_process(var/mob/living/M as mob)
@@ -106,10 +106,14 @@ datum/reagent/consumable/capsaicin/on_mob_life(var/mob/living/M as mob)
 			M.bodytemperature += 10 * TEMPERATURE_DAMAGE_COEFFICIENT
 			if(isslime(M))
 				M.bodytemperature += rand(10,20)
-		if(25 to INFINITY)
+		if(25 to 35)
 			M.bodytemperature += 15 * TEMPERATURE_DAMAGE_COEFFICIENT
 			if(isslime(M))
 				M.bodytemperature += rand(15,20)
+		if(35 to INFINITY)
+			M.bodytemperature += 20 * TEMPERATURE_DAMAGE_COEFFICIENT
+			if(isslime(M))
+				M.bodytemperature += rand(20,25)
 	..()
 	return
 
@@ -128,15 +132,21 @@ datum/reagent/consumable/frostoil/on_mob_life(var/mob/living/M as mob)
 			if(isslime(M))
 				M.bodytemperature -= rand(5,20)
 		if(15 to 25)
-			M.bodytemperature -= 15 * TEMPERATURE_DAMAGE_COEFFICIENT
+			M.bodytemperature -= 20 * TEMPERATURE_DAMAGE_COEFFICIENT
 			if(isslime(M))
 				M.bodytemperature -= rand(10,20)
-		if(25 to INFINITY)
-			M.bodytemperature -= 20 * TEMPERATURE_DAMAGE_COEFFICIENT
+		if(25 to 35)
+			M.bodytemperature -= 30 * TEMPERATURE_DAMAGE_COEFFICIENT
 			if(prob(1))
 				M.emote("shiver")
 			if(isslime(M))
 				M.bodytemperature -= rand(15,20)
+		if(35 to INFINITY)
+			M.bodytemperature -= 40 * TEMPERATURE_DAMAGE_COEFFICIENT
+			if(prob(5))
+				M.emote("shiver")
+			if(isslime(M))
+				M.bodytemperature -= rand(20,25)
 	..()
 	return
 
@@ -288,7 +298,6 @@ datum/reagent/mushroomhallucinogen/on_mob_life(var/mob/living/M as mob)
 			M.druggy = max(M.druggy, 40)
 			if(prob(30))
 				M.emote(pick("twitch","giggle"))
-	current_cycle++
 	..()
 	return
 
@@ -318,13 +327,13 @@ datum/reagent/consumable/cornoil/reaction_turf(var/turf/simulated/T, var/volume)
 	src = null
 	if(volume >= 3)
 		T.MakeSlippery()
-	var/hotspot = (locate(/obj/effect/hotspot) in T)
+	var/obj/effect/hotspot/hotspot = (locate(/obj/effect/hotspot) in T)
 	if(hotspot)
 		var/datum/gas_mixture/lowertemp = T.remove_air( T:air:total_moles() )
 		lowertemp.temperature = max( min(lowertemp.temperature-2000,lowertemp.temperature / 2) ,0)
 		lowertemp.react()
 		T.assume_air(lowertemp)
-		qdel(hotspot)
+		hotspot.Kill()
 
 datum/reagent/consumable/enzyme
 	name = "Universal Enzyme"
@@ -410,3 +419,20 @@ datum/reagent/consumable/eggyolk
 	id = "eggyolk"
 	description = "It's full of protein."
 	color = "#FFB500"
+
+datum/reagent/consumable/corn_starch
+	name = "Corn Starch"
+	id = "corn_starch"
+	description = "A slippery solution."
+	color = "#C8A5DC"
+
+datum/reagent/consumable/corn_syrup
+	name = "Corn Syrup"
+	id = "corn_syrup"
+	description = "Decays into sugar."
+	color = "#C8A5DC"
+
+datum/reagent/consumable/corn_syrup/on_mob_life(var/mob/living/M as mob)
+	M.reagents.add_reagent("sugar", 3)
+	M.reagents.remove_reagent("corn_syrup", 1)
+	..()
